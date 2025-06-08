@@ -36,9 +36,9 @@
                             <label for="age" class="form-label">Fascia d'età</label>
                             <select class="form-select form-select-lg" name="age" id="age">
                                 <option selected>Seleziona uno</option>
-                                <option value="">Minorenne</option>
-                                <option value="">Maggiorenne</option>
-                                <option value="">Senior</option>
+                                <option value="minor">Minorenne</option>
+                                <option value="adult">Maggiorenne</option>
+                                <option value="senior">Senior</option>
                             </select>
                         </div>
                     </div>
@@ -52,6 +52,33 @@
                     </button>
                 </div>
             </form>
+
+            <h2 class="text-uppercase text-center">Il tuo biglietto</h2>
+            <div class="card p-3">
+                <h4 class="text-uppercase fs-6">dettaglio passeggeri</h4>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card-head">
+                            <span class="text-uppercase">nome passeggero</span>
+                            <span class="passenger-name d-block"></span>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3 offer">Offerta</div>
+                                <div class="col-3 railcar">Carrozza
+                                    <span class="d-block">5</span>
+                                </div>
+                                <div class="col-3 code">Codice CP
+                                    <span class="d-block">92911</span>
+                                </div>
+                                <div class="col-3 ticket-price">Costo Biglietto</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
