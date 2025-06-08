@@ -15,41 +15,43 @@
     <main>
         <h1 class="text-uppercase text-center">Calcola il prezzo del tuo biglietto</h1>
         <div class="container">
-            <div class="row">
-                <div class="col-4">
-                    <div class="mb-3">
-                        <label for="full-name" class="form-label">Nome Cognome</label>
-                        <input type="text" class="form-control" name="full-name" id="full-name"
-                            aria-describedby="helpId" placeholder="Jon Snow" />
+            <form>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="full-name" class="form-label">Nome Cognome</label>
+                            <input type="text" class="form-control" name="full-name" id="full-name"
+                                aria-describedby="helpId" placeholder="Jon Snow" />
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="km" class="form-label">Km da percorrere</label>
+                            <input type="text" class="form-control" name="km" id="km" aria-describedby="helpId"
+                                placeholder="10" />
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="age" class="form-label">Fascia d'età</label>
+                            <select class="form-select form-select-lg" name="age" id="age">
+                                <option selected>Seleziona uno</option>
+                                <option value="">Minorenne</option>
+                                <option value="">Maggiorenne</option>
+                                <option value="">Senior</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="mb-3">
-                        <label for="km" class="form-label">Km da percorrere</label>
-                        <input type="text" class="form-control" name="km" id="km" aria-describedby="helpId"
-                            placeholder="10" />
-                    </div>
+                <div>
+                    <button type="generate" class="btn btn-primary">
+                        Genera
+                    </button>
+                    <button type="delete" class="btn btn-primary">
+                        Annulla
+                    </button>
                 </div>
-                <div class="col-4">
-                    <div class="mb-3">
-                        <label for="age" class="form-label">Fascia d'età</label>
-                        <select class="form-select form-select-lg" name="age" id="age">
-                            <option selected>Seleziona uno</option>
-                            <option value="">Minorenne</option>
-                            <option value="">Maggiorenne</option>
-                            <option value="">Senior</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <button type="generate" class="btn btn-primary">
-                    Genera
-                </button>
-                <button type="delete" class="btn btn-primary">
-                    Annulla
-                </button>
-            </div>
+            </form>
         </div>
     </main>
 
