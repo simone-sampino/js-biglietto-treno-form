@@ -38,17 +38,17 @@ formEl.addEventListener("submit", function (e) {
   if (ageValue === "minor") {
     const minorDiscount = 0.8;
     price = price * minorDiscount;
-    offerValue = "Sconto minorenni";
+    offerValue = "Sconto 20% minorenni";
     console.log("Il tuo biglietto scontato del 20% costa " + price.toFixed(2));
   } else if (ageValue === "senior") {
     const seniorDiscount = 0.6;
     price = price * seniorDiscount;
-    offerValue = "Sconto over 65";
+    offerValue = "Sconto 40% over 65";
     console.log("Il tuo biglietto scontato del 40% costa " + price.toFixed(2));
   }
 
   //   update card
-  passengerNameEl.innerHTML = fullNameValue;
-  ticketPriceEl.innerHTML = price.toFixed(2);
-  offerEl.innerHTML = offerValue;
+  passengerNameEl.innerText = fullNameValue;
+  ticketPriceEl.innerText = price.toFixed(2);
+  offerEl.innerText = offerValue;
 });
