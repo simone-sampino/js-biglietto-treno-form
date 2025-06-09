@@ -26,24 +26,29 @@ formEl.addEventListener("submit", function (e) {
   const fullNameValue = inputFullNameEl.value;
   const kmValue = inputKmEl.value;
   const ageValue = selectAgeEl.value;
+  let offerValue = offerEl.value;
 
-  //   console.log(fullNameValue, kmValue, ageValue);
+  // console.log(fullNameValue, kmValue, ageValue);
 
   const pricePerKm = 0.21;
   let price = inputKmEl.value * pricePerKm;
   console.log(price.toFixed(2));
+  offerValue = "Standard";
 
   if (ageValue === "minor") {
     const minorDiscount = 0.8;
     price = price * minorDiscount;
+    offerValue = "Sconto minorenni";
     console.log("Il tuo biglietto scontato del 20% costa " + price.toFixed(2));
   } else if (ageValue === "senior") {
     const seniorDiscount = 0.6;
     price = price * seniorDiscount;
+    offerValue = "Sconto over 65";
     console.log("Il tuo biglietto scontato del 40% costa " + price.toFixed(2));
   }
 
   //   update card
   passengerNameEl.innerHTML = fullNameValue;
   ticketPriceEl.innerHTML = price.toFixed(2);
+  offerEl.innerHTML = offerValue;
 });
