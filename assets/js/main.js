@@ -17,33 +17,33 @@ const ticketPriceEl = document.querySelector(".ticket-price");
 
 // console.log(passengerNameEl, offerEl, railcarEl, codeEl, ticketPriceEl);
 
-//   values
-const fullNameValue = inputFullNameEl.value;
-const kmValue = inputKmEl.value;
-const ageValue = selectAgeEl.value;
-
-//   console.log(fullNameValue, kmValue, ageValue);
-
 // implementation
 formEl.addEventListener("submit", function (e) {
   // prevent default behavior
   e.preventDefault();
 
+  //   values
+  const fullNameValue = inputFullNameEl.value;
+  const kmValue = inputKmEl.value;
+  const ageValue = selectAgeEl.value;
+
+  //   console.log(fullNameValue, kmValue, ageValue);
+
   const pricePerKm = 0.21;
   let price = inputKmEl.value * pricePerKm;
   console.log(price.toFixed(2));
 
-  if ("minor") {
+  if (ageValue === "minor") {
     const minorDiscount = 0.8;
     price = price * minorDiscount;
     console.log("Il tuo biglietto scontato del 20% costa " + price.toFixed(2));
-  } else if ("senior") {
+  } else if (ageValue === "senior") {
     const seniorDiscount = 0.6;
     price = price * seniorDiscount;
     console.log("Il tuo biglietto scontato del 40% costa " + price.toFixed(2));
   }
-});
 
-//   update card
-passengerNameEl.innerHTML = fullNameValue;
-// ticketPriceEl.innerHTML = price;
+  //   update card
+  passengerNameEl.innerHTML = fullNameValue;
+  ticketPriceEl.innerHTML = price.toFixed(2);
+});
